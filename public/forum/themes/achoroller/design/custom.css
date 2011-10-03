@@ -1,0 +1,746 @@
+/*
+
+*/
+
+body {
+	background:#ffffff;
+	color:#333333;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-weight:normal;
+	text-align:center;
+}
+
+#Body {
+	margin:0 auto;
+}
+
+#container-wrap{
+	width:100%;
+	margin:10px auto;
+}
+
+#container {
+	margin:0 auto;
+	width:960px;
+}
+
+a, a:link, a:visited, a:active {
+	color:#282828;
+}
+
+a:hover{
+	color:#9e9e9e;
+	/*text-decoration:underline;*/
+}
+
+div.Box h4 {
+	color:#282828;
+}
+
+a.BigButton {
+	-moz-box-shadow:0 0 0px #fff;
+	background:#A2CB2D;
+	border:1px solid #376d01;
+	color:#fff;
+	text-shadow:0 1px 0 #376d01;
+}
+
+a.BigButton:hover {
+    color: #fff;
+    border: 1px solid #666;
+	box-shadow: 0;
+	-moz-box-shadow:0 0 0px #fff;
+
+}
+a.BigButton:focus {
+    background: #A2CB2D;
+	color: #fff;
+	box-shadow: 0;
+	-moz-box-shadow:0 0 0px #fff;
+
+}
+
+input.Button {
+	font-size:12px;
+	font-weight:bold;
+}
+
+#AttachFileLink {
+	cursor:pointer;
+}
+
+a.Button,
+.Button, #AttachFileLink {
+   cursor: pointer;
+   margin: 0;
+   font-size: 11px;
+   padding: 2px;
+   background:#f2f2f2;
+   color: #282828;
+	text-shadow: 0 1px 0 #fff;
+   border: 1px solid #999;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+	box-shadow: 0px 0px 0px #fff;
+	-moz-box-shadow: 0px 0px 0px #fff;
+	-webkit-box-shadow: 0px 0px 0px #fff;
+   }
+
+.Button:hover, #AttachFileLink {
+   color: #282828;
+   border: 1px solid #282828;
+}
+.Button:focus {
+   background: #A2CB2D;
+}
+
+ul.DataList a.Delete {
+	padding: 4px;
+    background:#f2f2f2;
+    color: #282828;
+    border: 1px solid #ddd;
+}
+
+ul.DataList a.Delete:hover {
+    border: 1px solid #282828;
+    background: #c4c4c4;
+}
+
+div.Box {
+	-moz-box-shadow:0 0 0px #fff;
+}
+
+/* ============================================================= Header */
+
+#Head {
+	background: transparent;
+	padding:0;
+	text-align:right;
+	margin-left: 2px;
+}
+
+body #Head h1 {
+
+	margin:25px 0 0 40px;
+	padding:0;
+}
+
+div#t-right {
+	float:right;
+	position:relative;
+	width:488px;
+	z-index:5;
+}
+
+div#t-right p.intro {
+	color:#464748;
+	font-size:1.9em;
+	line-height:1.4em;
+	margin:55px 70px 0 0;
+	text-align:left;
+}
+
+div.Menu {
+	text-align:left;
+}
+
+ul#Menu {
+	float:left;
+	padding:0;
+}
+
+#Head h1.Title a{
+	color:#A2CB2D;
+	font-size:3em;
+
+}
+
+div.Menu {
+	float:left;
+	margin:10px 0 0 20px;
+	text-align:left;
+	width:960px;
+}
+
+#Head h1.Title a:hover{
+	color:#376d01;
+	font-size:3em;
+}
+
+#Menu a, #Menu li.Active a {
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	background:#f2f2f2;
+	border:1px solid #c4c4c4;
+	color:#282828;
+}
+
+#Menu li a:hover,#Menu li.Active a:hover {
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	background:#c4c4c4;
+	color:#282828 !important;
+}
+
+#Menu li ul li a:hover,#Menu li.Active ul li a:hover {
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	background:#c4c4c4;
+	color:#282828 !important;
+}
+
+#Menu ul, #Menu li.Active {
+	background:#f2f2f2;
+	color:#282828;
+}
+
+#Menu li.NonTab, #Menu li.NonTab a {
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	background:#c4c4c4;
+	color:#282828;
+}
+
+#Menu a span, #Menu li.Active a span, #Menu li.Highlight a:hover span {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background:#A2CB2D;
+	border:1px solid #A2CB2D;
+	color:#fff;
+}
+
+div.Tabs div.SubTab {
+	background:#fff;
+}
+
+div.Preview {
+	background:#fff;
+}
+
+/* ============================================================= Entry Screen */
+body.Entry #Content {
+	float:left;
+}
+body.Entry #Content h1 {
+    font-size:19px;
+	font-weight:normal;
+	line-height:22px;
+	padding:20px 0 5px 5px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#282828;
+}
+
+body.Entry #Search{
+	padding:0 0 7px 7px;
+}
+
+body.Entry #Content div.Box {
+	background:#f2f2f2;
+	border:1px solid #c4c4c4;
+}
+body.Entry form ul li label {
+	color:#282828;
+}
+
+/* ============================================================= content */
+
+
+#Content {
+	float:left;
+	margin:0 0 40px;
+	padding:15px 20px 20px;
+	width:630px;
+}
+
+div.MessageForm, div.Tabs {
+	background:#f2f2f2;
+	border:1px solid #c4c4c4;
+	display:block;
+	margin-bottom:30px;
+	padding:5px 8px;
+}
+
+a.Active, div.Tabs li.Active a {
+	background:#FFFFFF;
+	color:#282828;
+}
+
+div.MessageForm a.Cancel, div.MessageForm a.Cancel:link, div.MessageForm a.Cancel:active, div.MessageForm a.Cancel:visited, div.MorePager a, div.MorePager a:link,  div.MorePager a:active, div.MorePager a:visited, a.TabLink, a.TabLink:link,  a.TabLink:active, a.TabLink:visited, div.Tabs li a, div.Tabs li a:link, div.Tabs li a:active, div.Tabs li a:visited {
+	background:#ffffff;
+	border:1px solid #c4c4c4;
+	font-size:12px;
+	color:#282828;
+}
+
+div.MessageForm a.Cancel:hover, div.MorePager a:hover, a.TabLink:hover, div.Tabs li a:hover {
+	background:#e1e1e1;
+	border:1px solid #c4c4c4;
+	font-size:12px;
+}
+
+ul.DataList li.Item {
+	border-bottom:1px solid #e1e1e1;
+	margin:0 0 20px;
+	padding:4px 0;
+}
+
+.Mine {
+	background:#fff;
+}
+
+ul.DataList a.Title {
+	font-size:19px;
+	font-weight:normal;
+	line-height:22px;
+	padding:7px 0 5px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#282828;
+}
+
+div.Tabs li a span {
+	background:#A2CB2D;
+	color:#fff;
+}
+
+ul.DataList div.Meta strong {
+	background:#A2CB2D;
+	color:#fff;
+}
+
+ul.DataList div.Meta span.Announcement {
+	background:#A2CB2D;
+	color:#fff;
+}
+
+ul.DataList li.Mine div.Meta a.Category {
+	background:#f2f2f2;
+}
+
+ul.Options li.Parent strong {
+	background:#f2f2f2;
+	border:1px solid #ddd;
+	color:#282828;
+}
+
+ul.Options li.Parent strong:hover,
+ul.Options li.Active strong:hover,
+ul.Options li.Active strong,
+ul.Options li.Active ul {
+  	box-shadow: 0px 0px 0px #fff;
+	-moz-box-shadow: 0 0 0px #fff;
+	-webkit-box-shadow: 0px 0px 0px #fff;
+}
+
+a.Bookmark,
+a.Bookmarking {
+	float: right;
+   display: block;
+   background: url(star_sprite.png) top center no-repeat;
+   height: 22px;
+   width: 22px;
+   margin: 2px 4px 0 4px;
+}
+a.Bookmark span,
+a.Bookmarking span {
+   display: none;
+}
+a.Bookmarked {
+   background: url(star_sprite.png) center center no-repeat;
+}
+a.Bookmarking {
+   background: url(star_sprite.png) bottom center no-repeat;
+}
+
+/* ============================================================= discussions */
+
+#DiscussionForm h2 {
+	font-size:19px;
+	font-weight:normal;
+	line-height:22px;
+	padding:7px 0 5px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#282828;
+}
+
+#DiscussionForm form {
+	background:#f2f2f2;
+	border:1px solid #c4c4c4;
+	margin:0;
+	padding:20px;
+	width:880px;
+}
+
+div.CommentForm textarea {
+	height:100px;
+	margin:0 0 6px;
+	min-height:100px;
+	width:600px;
+}
+
+li.Editing {
+	background:#f2f2f2 none repeat scroll 0 0;
+}
+
+input#Form_SaveComment.Button.CommentButton{
+	margin-right:45px;
+}
+
+#DiscussionForm input.InputBox {
+	margin-bottom:10px;
+	width:880px;
+}
+
+#DiscussionForm textarea {
+	height:100px;
+	margin:0 0 6px;
+	min-height:100px;
+	width:880px;
+}
+
+/* ============================================================== MessageList */
+/* used for lists of message-based content (discussion comments, private */
+
+ul.MessageList, ul.MessageList li {
+	margin:0 0 10px;
+}
+
+div.Comment div.CommentForm textarea {
+	width:600px;
+}
+
+
+/* ============================================================= activities */
+
+
+ul.Activities div.Excerpt a,
+ul.Activities div.Meta a {
+   color: #282828;
+}
+ul.Activities div.Excerpt a:hover,
+ul.Activities div.Meta a:hover {
+   color: #9e9e9e;
+}
+
+ul.Activities ul.DataList li {
+	background:#F2F2F2 none repeat scroll 0 0;
+	border:1px solid #C4C4C4;
+}
+
+ul.Activities li.CommentForm input.Button {
+	-moz-box-shadow:0 0 0px #fff;
+	font-size:12px;
+}
+
+form.Activity textarea {
+	width:600px;
+}
+
+/* ==================================================== New Conversation Form */
+
+#ConversationForm h2 {
+	font-size:19px;
+	font-weight:normal;
+	line-height:22px;
+	padding:7px 0 5px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#282828;
+}
+
+#ConversationForm form {
+	background:#f2f2f2;
+	border:1px solid #c4c4c4;
+	margin:0;
+	padding:20px;
+}
+
+.ac_over {
+	background:#A2CB2D;
+	color:#282828;
+}
+
+.ac_over strong {
+	background:#A2CB2D;
+	font-weight:normal;
+}
+
+#MessageForm {
+	background:#F2F2F2;
+}
+
+#MessageForm h2 {
+	color:#282828;
+}
+
+/* ============================================================= profile page */
+
+body.Profile #Content {
+
+	width:630px;
+}
+
+body.Profile #Panel {
+
+	padding:20px 0 0 20px;
+
+}
+
+div.User h1 {
+	margin:15px 0 20px 0;
+	font-size:19px;
+	font-weight:normal;
+	line-height:22px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#282828;
+}
+
+div.Photo img{
+	border:1px solid #282828;
+	padding:2px;
+	margin-bottom:10px;
+
+}
+
+ul.DataList div.Photo img {
+	border:1px solid #282828;
+	padding:2px;
+}
+
+ul.PanelInfo li {
+	padding:5px;
+}
+
+body.Profile ul.PanelInfo{
+	border:1px solid #f2f2f2;
+}
+body.Profile ul.PanelInfo li{
+	background:#f2f2f2;
+}
+
+div.Box dl {
+	background:#fff none repeat scroll 0 0;
+	border-bottom:1px solid #c4c4c4;
+	border-top:1px solid #c4c4c4;
+	overflow:hidden;
+	padding:3px;
+}
+
+div.Popup div.Body {
+	border:4px solid #282828;
+}
+
+div.Popup h1, div.Popup h2 {
+	background:#282828;
+	border-bottom:1px solid #ddd;
+}
+
+div.Popup .Footer {
+	background:#fff;
+	border-top:1px solid #fff;
+	padding:2px 6px 0 0;
+
+}
+
+/* ============================================================= search */
+
+#Search {
+	background:#22282E;
+	border:#22282E 1px solid;
+	display:block;
+	margin:0 0 30px;
+	padding:7px;
+}
+
+
+#Head form input.InputBox {
+	background:#FFFFFF;
+	border:1px solid #f2f2f2;
+	color:#282828;
+	width:150px;
+}
+
+#Panel input.InputBox, div.AddPeople textarea.MultiComplete {
+	margin:0 5px 2px 5px;
+	width:180px;
+}
+
+input.DateBox, input.InputBox, input.SmallInput, textarea {
+	border:1px solid #282828;
+	font-family:Georgia,"Times New Roman",Times,serif;;
+	font-size:12px;
+	padding:3px;
+}
+
+/* ============================================================= sidebar */
+
+div.Box {
+	background:#f2f2f2 none repeat scroll 0 0;
+	color:#282828;
+	;
+}
+
+#Panel {
+	float:right;
+	margin-bottom:50px;
+	width:250px;
+	padding:15px 20px 20px;
+}
+
+
+ul.PanelInfo {
+	border-top:1px solid #c4c4c4;
+}
+
+ul.PanelInfo li.Active {
+	border-bottom:1px solid #C4C4C4;
+}
+
+ul.PanelInfo li {
+	background:#e1e1e1;
+	border-bottom:1px solid #c4c4c4;
+}
+
+ul.PanelInfo li.Active a {
+	color:#282828;
+}
+
+ul.PanelInfo div.Meta strong {
+	background:#A2CB2D;
+	color:#fff;
+}
+
+/* ============================================================= footer */
+
+#Foot {
+	clear:both;
+	color:#70727C;
+}
+
+#Foot a, #Foot a:link, #Foot a:visited, #Foot a:active {
+	color:#282828;
+}
+
+#Foot a:hover{
+	color:#9e9e9e;
+	/*text-decoration:underline;*/
+}
+#Foot .vanilla-ico {
+	background:url(vanilla_ico.png) no-repeat;
+	float:left;
+	width:15px;
+	height:15px;
+	margin:0;
+	padding:0 7px 7px 0;
+}
+
+.Foot {
+	background:#f2f2f2;
+	border-bottom:1px solid #c4c4c4;
+}
+
+#Foot div {
+	margin:0 0 20px 20px;
+	padding:6px 0;
+	text-align:left;
+	width:960px;
+}
+
+/* ============================================================= plugins */
+
+/*file uplaod*/
+div.Attachments {
+	background-color:#f2f2f2;
+}
+
+/* NEW STYLE */
+#topbar{
+	background: #22282E;
+	color: #fff;
+	height: 32px;
+}
+#subtitle{
+	float:left;
+	font-size: 10px;
+	margin-top: 10px;
+	font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+}
+#topbar .topbar_center{
+	width: 960px;
+	margin: 0 auto;
+}
+#topbar h1{
+	display: inline;
+	border: none;
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	font-variant: small-caps;
+	font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+}
+
+#right_bar{
+	float: right;
+}
+
+#right_bar .SignOut{
+	color: transparent;
+	margin-top: 3px;
+	overflow: hidden;
+	width: 25px;
+	height: 25px;
+	background: transparent url("textured/shut-down.png") no-repeat;
+	float: left;
+	display: block;
+}
+
+#right_bar .SignInPopup{
+	margin-top: 5px;
+	font-weight: bold;
+	display: block;
+}
+
+#msg_link{
+	margin-top: 3px;
+	overflow: hidden;
+	width: 25px;
+	height: 25px;
+	background: transparent url("textured/email.png") no-repeat;
+	float: left;
+	display: block;
+}
+#user_link{
+	margin-top: 3px;
+	overflow: hidden;
+	width: 25px;
+	height: 25px;
+	background: transparent url("textured/agent.png") no-repeat;
+	float: left;
+	display: block;
+}
+
+#Form_Go{
+	border:none;
+	color: transparent;
+	background: transparent url("textured/search.png") no-repeat;
+	width: 28px;
+	height: 28px;
+}
+
+#top_search{
+	float: left;
+	margin-top: 3px;
+	margin-left: 50px;
+}
+#topbar a{
+	color: #fff;
+}
+
+#Content .MultiEntryMethods{
+	width: 650px;
+}
+#Content .Methods{
+	margin-top: 10px;
+}

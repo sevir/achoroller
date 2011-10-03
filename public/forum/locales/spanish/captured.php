@@ -1,5 +1,13 @@
 <?php if (!defined('APPLICATION')) exit();
 
+/* add by SeVIR */
+$Definition['Mark All Viewed'] = 'Marcar como leído';
+$Definition['Activity'] = 'Actividad';
+$Definition['Inbox'] = 'Mensajes';
+$Definition['Security Check'] = 'AntiSPAM';
+$Definition['Welcome to Vanilla!'] = 'Bienvenido al foro';
+/* end add by SeViR */
+
 /** Added to the baseline locale because a definition was missing. **/
 	$Definition['Save Comment'] = 'Guardar Comentario';
 	$Definition['Unannounce'] = 'Desanunciar';
@@ -11,7 +19,7 @@
 	$Definition['New Password'] = 'Contraseña nueva';
 	$Definition['Change Password'] = 'Cambiar Contraseña';
 	$Definition['Add a Comment'] = 'Añadir un Comentario';
-	$Definition['Edit Discussion'] = 'Editar Discusión';	
+	$Definition['Edit Discussion'] = 'Editar Discusión';
 	$Definition['Quote'] = 'Citar';
 /** End: added to the baseline locale because a definition was missing. **/
 
@@ -138,7 +146,7 @@ $Definition['EmailMembershipApproved'] = 'Hola %1$s,
 Has sido aprobado como nuevo miembro. Puedes conectarte a través del siguiente enlace:
 
   %2$s
-  
+
 ¡Qué tengas un buen día!';
 $Definition['EmailNotification'] = '%1$s
 
@@ -201,7 +209,7 @@ $Definition['ErrorPermission'] = 'Lo siento, permiso denegado.';
 $Definition['ErrorRecordNotFound'] = 'No se pudo encontrar el registro solicitado.';
 $Definition['ErrorTermsOfService'] = 'Debes aceptar los términos de servicio.';
 
-$Definition['Female'] = 'Hembra';
+$Definition['Female'] = 'Mujer';
 $Definition['Forgot?'] = '¿La olvidaste?';
 
 $Definition['Gender'] = 'Género';
@@ -233,7 +241,7 @@ $Definition['Keep me signed in'] = 'Mantenerme conectado';
 $Definition['Last Active'] = 'Última Actividad';
 $Definition['Login with Facebook'] = 'Acceder con Facebook';
 
-$Definition['Male'] = 'Varón';
+$Definition['Male'] = 'Hombre';
 $Definition['Most recent by %1$s'] = 'Más reciente por %1$s';
 $Definition['My Bookmarks'] = 'Marcadores';
 $Definition['My Discussions'] = 'Mis Discusiones';
@@ -353,5 +361,3 @@ $Definition['You do not have any notifications yet.'] = 'Aún no tienes notifica
 $Definition['your'] = 'tu';
 $Definition['Your application will be reviewed by an administrator. You will be notified by email if your application is approved.'] = 'Su solicitud será revisada por un administrador. Si su solicitud es aprobada se le avisará por correo .';
 $Definition['Your registered username: <strong>%s</strong>'] = 'Tu nombre de usuario registrado: <strong>%s</strong>';
-
-

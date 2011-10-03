@@ -1,0 +1,466 @@
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+All Discussions
+Inbox
+Discussions
+Mark All Viewed
+All Discussions
+All Discussions
+My Bookmarks
+My Discussions
+My Drafts
+All Discussions
+No discussions were found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Start a New Discussion
+Categories
+All Discussions
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Recent Activity
+Inbox
+Discussions
+Mark All Viewed
+Recent Activity
+Share
+Compartir
+You
+his
+he
+your
+somebody
+wall
+GenderSuffix.Third.m
+%1$s joined.
+Activity.Join.FullHeadline
+%1$s joined.
+Activity.Join.ProfileHeadline
+Activity.Delete
+Date.DefaultTimeFormat
+Activity.Comment
+Write a comment
+Comment
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Dashboard
+Dashboard
+Appearance
+Homepage
+Banner
+Themes
+Messages
+Users
+Users
+Roles & Permissions
+Registration
+Authentication
+Forum Settings
+Addons
+Plugins
+Applications
+Locales
+Settings
+Outgoing Email
+Routes
+Import
+Categories
+Spam
+Advanced
+Flagged Content
+Forum
+Forum
+Tagging
+&lt;Embed&gt; Vanilla
+Organize your Categories
+Customize your Public Profile
+Start your First Discussion
+Manage your Plugins
+Inbox
+Discussions
+Mark All Viewed
+Need More Help?
+Using Vanilla Stats on localhost
+Vanilla statistics are disabled on localhost.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Visit Site
+Sign Out
+Internal
+Internal
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Inbox
+Discussions
+Mark All Viewed
+Inbox
+Discussions
+Mark All Viewed
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+All Discussions
+Inbox
+Discussions
+Mark All Viewed
+All Discussions
+All Discussions
+My Bookmarks
+My Discussions
+My Drafts
+All Discussions
+No discussions were found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
+Sign Out
+Internal
+Internal
+Go
+Start a New Discussion
+Categories
+All Discussions
+Not Found (404)
+Inbox
+Discussions
+Mark All Viewed
+Page Not Found
+The page you were looking for could not be found.
+Transport error: %s
+Confirm
+Are you sure you want to do that?
+Okay
+Cancel
+Search
