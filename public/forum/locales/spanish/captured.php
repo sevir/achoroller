@@ -10,8 +10,8 @@ $Definition['Welcome to Vanilla!'] = 'Bienvenido al foro';
 
 /** Added to the baseline locale because a definition was missing. **/
 	$Definition['Save Comment'] = 'Guardar Comentario';
-	$Definition['Unannounce'] = 'Desanunciar';
-	$Definition['Announcement'] = 'Anunciamiento';
+	$Definition['Unannounce'] = 'Quitar anuncio';
+	$Definition['Announcement'] = 'Anuncio';
 	$Definition['Dismiss'] = 'Descartar';
 	$Definition['Closed'] = 'Cerrado';
 	$Definition['Reopen'] = 'Reabrir';
@@ -93,7 +93,7 @@ $Definition['Back to Discussions'] = 'Volver a Discusiones';
 $Definition['Bookmark'] = 'Marcador';
 $Definition['bookmarked discussion'] = 'discusión marcada';
 $Definition['Bookmarked Discussions'] = 'Discusiones Marcadas';
-$Definition['By uploading a file you certify that you have the right to distribute this picture and that it does not violate the Terms of Service.'] = 'By uploading a file you certify that you have the right to distribute this picture and that it does not violate the Terms of Service.';
+$Definition['By uploading a file you certify that you have the right to distribute this picture and that it does not violate the Terms of Service.'] = 'Al subir el archivo certificas que tienes derecho a distribuir esta imagen y no está sujeta a una violación del copyright de terceros.';
 
 $Definition['Cancel'] = 'Cancelar';
 $Definition['Categories'] = 'Categorías';
@@ -108,7 +108,7 @@ $Definition['Confirm Password'] = 'Confirmar Contraseña';
 $Definition['Connect'] = 'Conectar';
 $Definition['conversation'] = 'conversación';
 $Definition['Conversations'] = 'Conversaciones';
-$Definition['Create One.'] = 'Créate una cuenta.';
+$Definition['Create One.'] = 'Crea una cuenta.';
 
 $Definition['Dashboard'] = 'Panel';
 $Definition['Date.DefaultDayFormat'] = '%B %e';
@@ -326,16 +326,16 @@ $Definition['Unbookmark'] = 'Desmarcar';
 $Definition['Upload'] = 'Subir';
 $Definition['Username'] = 'Usuario';
 
-$Definition['ValidateBoolean'] = '%s is not a valid boolean.';
+$Definition['ValidateBoolean'] = '%s tiene que ser cierto o falso.';
 $Definition['ValidateConnection'] = 'The connection parameters you specified failed to open a connection to the database. The database reported the following error: <code>%s</code>';
-$Definition['ValidateDate'] = '%s is not a valid date.';
-$Definition['ValidateDecimal'] = '%s is not a valid decimal.';
-$Definition['ValidateEmail'] = '%s does not appear to be valid.';
-$Definition['ValidateEnum'] = '%s is not valid.';
-$Definition['ValidateInteger'] = '%s is not a valid integer.';
-$Definition['ValidateLength'] = '%1$s is %2$s characters too long.';
+$Definition['ValidateDate'] = '%s no es una fecha válida.';
+$Definition['ValidateDecimal'] = '%s no es un número decimal.';
+$Definition['ValidateEmail'] = '%s no parece ser válido.';
+$Definition['ValidateEnum'] = '%s no es válido.';
+$Definition['ValidateInteger'] = '%s tiene que ser un número.';
+$Definition['ValidateLength'] = '%1$s tiene %2$s caractéres de longitud.';
 $Definition['ValidateMatch'] = 'The %s fields do not match.';
-$Definition['ValidateMinimumAge'] = 'You must be at least 16 years old to proceed.';
+$Definition['ValidateMinimumAge'] = 'Debes tener al menos 16 años.';
 $Definition['ValidateOneOrMoreArrayItemRequired'] = 'You must select at least one %s.';
 $Definition['ValidateRegex'] = '%s does not appear to be in the correct format.';
 $Definition['ValidateRequired'] = 'Tienes que rellenar el %s';
