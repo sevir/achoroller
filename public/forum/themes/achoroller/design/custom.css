@@ -723,10 +723,11 @@ div.Attachments {
 
 #Form_Go{
 	border:none;
-	color: transparent;
+	color: transparent ;
 	background: transparent url("textured/search.png") no-repeat;
 	width: 28px;
 	height: 28px;
+	text-shadow: none;
 }
 
 #top_search{
