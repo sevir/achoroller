@@ -65,7 +65,7 @@ function _recaptcha_qsencode ($data) {
  * @return array response
  */
 function _recaptcha_http_post($host, $path, $data, $port = 80) {
-
+/* Original Rechaptcha code
         $req = _recaptcha_qsencode ($data);
 
         $http_request  = "POST $path HTTP/1.0\r\n";
@@ -77,7 +77,7 @@ function _recaptcha_http_post($host, $path, $data, $port = 80) {
         $http_request .= $req;
 
         $response = '';
-        if( false == ( $fs = @fsockopen($host, $port, $errno, $errstr, 10) ) ) {
+        if( false == ( $fs = @fsockopen($host, 80, $errno, $errstr, 10) ) ) {
                 die ('Could not open socket');
         }
 
@@ -89,6 +89,21 @@ function _recaptcha_http_post($host, $path, $data, $port = 80) {
         $response = explode("\r\n\r\n", $response, 2);
 
         return $response;
+ * */
+	$req = _recaptcha_qsencode ($data);
+	$ch = curl_init();
+	$pageurl = "http://".$host.$path;
+    	curl_setopt($ch, CURLOPT_POST, 1 );
+    	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_PROXYPORT, 8000);
+	curl_setopt($ch,CURLOPT_PROXY,'roxy.mpsaz.org');
+	curl_setopt($ch, CURLOPT_URL, $pageurl );
+	$html = curl_exec ( $ch );
+
+       $response = preg_split("/[\s]+/", $html);
+
+       return $response;
 }
 
 
@@ -109,7 +124,7 @@ function recaptcha_get_html ($pubkey, $error = null, $use_ssl = false)
 		echo ("To use reCAPTCHA you must get an API key from <a href='https://www.google.com/recaptcha/admin/create'>https://www.google.com/recaptcha/admin/create</a>");
       return;
    }
-	
+
 	if ($use_ssl) {
                 $server = RECAPTCHA_API_SECURE_SERVER;
         } else {
@@ -150,6 +165,7 @@ class ReCaptchaResponse {
   * @param array $extra_params an array of extra variables to post to the server
   * @return ReCaptchaResponse
   */
+ /*
 function recaptcha_check_answer ($privkey, $remoteip, $challenge, $response, $extra_params = array())
 {
 	if ($privkey == null || $privkey == '') {
@@ -160,8 +176,8 @@ function recaptcha_check_answer ($privkey, $remoteip, $challenge, $response, $ex
 		die ("For security reasons, you must pass the remote ip to reCAPTCHA");
 	}
 
-	
-	
+
+
         //discard spam submissions
         if ($challenge == null || strlen($challenge) == 0 || $response == null || strlen($response) == 0) {
                 $recaptcha_response = new ReCaptchaResponse();
@@ -179,7 +195,9 @@ function recaptcha_check_answer ($privkey, $remoteip, $challenge, $response, $ex
                                                  ) + $extra_params
                                           );
 
-        $answers = explode ("\n", $response [1]);
+        // $answers = explode ("\n", $response [1]);
+        $answers = $response;
+
         $recaptcha_response = new ReCaptchaResponse();
 
         if (trim ($answers [0]) == 'true') {
@@ -188,6 +206,49 @@ function recaptcha_check_answer ($privkey, $remoteip, $challenge, $response, $ex
         else {
                 $recaptcha_response->is_valid = false;
                 $recaptcha_response->error = $answers [1];
+        }
+        return $recaptcha_response;
+
+}
+  * */
+function recaptcha_check_answer ($privkey, $remoteip, $challenge, $response,
+$extra_params = array())
+{
+	if ($privkey == null || $privkey == '') {
+		die ("To use reCAPTCHA you must get an API key from <a
+href='http://recaptcha.net/api/getkey'>http://recaptcha.net/api/getkey</a>");
+	}
+
+	if ($remoteip == null || $remoteip == '') {
+		die ("For security reasons, you must pass the remote ip to reCAPTCHA");
+	}
+
+
+
+        //discard spam submissions
+        if ($challenge == null || strlen($challenge) == 0 || $response == null ||
+strlen($response) == 0) {
+                $recaptcha_response = new ReCaptchaResponse();
+                $recaptcha_response->is_valid = false;
+                $recaptcha_response->error = 'incorrect-captcha-sol';
+                return $recaptcha_response;
+        }
+
+        $response = _recaptcha_http_post (RECAPTCHA_VERIFY_SERVER, "/verify",
+                                          array (
+                                                 'privatekey' => $privkey,
+                                                 'remoteip' => $remoteip,
+                                                 'challenge' => $challenge,
+                                                 'response' => $response
+                                                 ) + $extra_params
+                                          );
+        $recaptcha_response = new ReCaptchaResponse();
+        if (trim ($response[0]) == 'true') {
+                $recaptcha_response->is_valid = true;
+        }
+        else {
+                $recaptcha_response->is_valid = 0;
+                $recaptcha_response->error = $response[1];
         }
         return $recaptcha_response;
 
@@ -216,7 +277,7 @@ function _recaptcha_aes_encrypt($val,$ky) {
 	if (! function_exists ("mcrypt_encrypt")) {
 		die ("To use reCAPTCHA Mailhide, you need to have the mcrypt php module installed.");
 	}
-	$mode=MCRYPT_MODE_CBC;   
+	$mode=MCRYPT_MODE_CBC;
 	$enc=MCRYPT_RIJNDAEL_128;
 	$val=_recaptcha_aes_pad($val);
 	return mcrypt_encrypt($enc, $ky, $val, $mode, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0");
@@ -233,11 +294,11 @@ function recaptcha_mailhide_url($pubkey, $privkey, $email) {
 		die ("To use reCAPTCHA Mailhide, you have to sign up for a public and private key, " .
 		     "you can do so at <a href='http://www.google.com/recaptcha/mailhide/apikey'>http://www.google.com/recaptcha/mailhide/apikey</a>");
 	}
-	
+
 
 	$ky = pack('H*', $privkey);
 	$cryptmail = _recaptcha_aes_encrypt ($email, $ky);
-	
+
 	return "http://www.google.com/recaptcha/mailhide/d?k=" . $pubkey . "&c=" . _recaptcha_mailhide_urlbase64 ($cryptmail);
 }
 
@@ -268,7 +329,7 @@ function _recaptcha_mailhide_email_parts ($email) {
 function recaptcha_mailhide_html($pubkey, $privkey, $email) {
 	$emailparts = _recaptcha_mailhide_email_parts ($email);
 	$url = recaptcha_mailhide_url ($pubkey, $privkey, $email);
-	
+
 	return htmlentities($emailparts[0]) . "<a href='" . htmlentities ($url) .
 		"' onclick=\"window.open('" . htmlentities ($url) . "', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;\" title=\"Reveal this e-mail address\">...</a>@" . htmlentities ($emailparts [1]);
 
