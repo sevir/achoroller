@@ -20,12 +20,13 @@ $PluginInfo['Debugger'] = array(
    'PluginUrl' => 'http://vanillaforums.org/addons/debugger',
    'Author' => "Mark O'Sullivan",
    'AuthorEmail' => 'mark@vanillaforums.com',
-   'AuthorUrl' => 'http://markosullivan.ca'
+   'AuthorUrl' => 'http://markosullivan.ca', 
+   'MobileFriendly' => TRUE,
 );
 
 // Install the debugger database.
 $tmp = Gdn::FactoryOverwrite(TRUE);
-Gdn::FactoryInstall(Gdn::AliasDatabase, 'Gdn_DatabaseDebug', dirname(__FILE__).DS.'class.database.debug.php', Gdn::FactorySingleton, array('Database'));
+Gdn::FactoryInstall(Gdn::AliasDatabase, 'Gdn_DatabaseDebug', dirname(__FILE__).DS.'class.databasedebug.php', Gdn::FactorySingleton, array('Database'));
 Gdn::FactoryOverwrite($tmp);
 unset($tmp);
 
@@ -43,7 +44,7 @@ class DebuggerPlugin extends Gdn_Plugin {
 
    public function Base_AfterBody_Handler($Sender) {
       $Session = Gdn::Session();
-      if(!defined('DEBUG') && !$Session->CheckPermission('Plugins.Debugger.View')) {
+      if(!Debug() && !$Session->CheckPermission('Plugins.Debugger.View')) {
          return;
       }
       
@@ -55,20 +56,21 @@ class DebuggerPlugin extends Gdn_Plugin {
 
       //$Session = Gdn::Session();
       //if ($Session->CheckPermission('Plugins.Debugger.View')) {
-      $String = '<div id="Sql">';
+      $String = '<div id="Sql" class="DebugInfo">';
+
+      $String .= '<h2>'.T('Debug Information').'</h2>';
 
       // Add the canonical Url.
       if (method_exists($Sender, 'CanonicalUrl')) {
          $CanonicalUrl = htmlspecialchars($Sender->CanonicalUrl(), ENT_COMPAT, 'UTF-8');
 
-         $String .= '<div class="CanonicalUrl"><b>'.T('Canonical Url')."</b>: <a href=\"$CanonicalUrl\">$CanonicalUrl</a></div>";
+         $String .= '<div class="CanonicalUrl"><b>'.T('Canonical Url')."</b>: <a href=\"$CanonicalUrl\" accesskey=\"r\">$CanonicalUrl</a></div>";
       }
 
       $Database = Gdn::Database();
       $SQL = $Database->SQL();
       if(!is_null($Database)) {
          $Queries = $Database->Queries();
-         $QueryTimes = $Database->QueryTimes();
          $String .= '<h3>'.count($Queries).' queries in '.$Database->ExecutionTime().'s</h3>';
          foreach ($Queries as $Key => $QueryInfo) {
             $Query = $QueryInfo['Sql'];
@@ -79,7 +81,8 @@ class DebuggerPlugin extends Gdn_Plugin {
                $Query = $SQL->ApplyParameters($Query, $tmp);
             }
             $String .= $QueryInfo['Method']
-               .'<small>'.@number_format($QueryTimes[$Key], 6).'s</small>'
+               .'<small>'.@number_format($QueryInfo['Time'], 6).'s</small>'
+               .(isset($QueryInfo['Cache']) ? '<div><b>Cache:</b> '.var_export($QueryInfo['Cache'], TRUE).'</div>' : '')
                .'<pre>'.htmlspecialchars($Query).';</pre>';
          }
       }

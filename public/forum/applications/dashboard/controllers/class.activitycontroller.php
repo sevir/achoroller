@@ -48,11 +48,8 @@ class ActivityController extends Gdn_Controller {
       
       $this->AddCssFile('style.css');
       
-      // Guest module
-      $GuestModule = new GuestModule($this);
-      $this->AddModule($GuestModule);
-      
-      // SignedIn module
+      // Add Modules
+      $this->AddModule('GuestModule');
       $this->AddModule('SignedInModule');
       
       parent::Initialize();
@@ -92,7 +89,7 @@ class ActivityController extends Gdn_Controller {
     * @param int $RoleID Unique ID of role to limit activity to.
     * @param int $Offset Number of activity items to skip.
     */
-   public function Index($RoleID = '', $Offset = FALSE) {
+   public function Index($RoleID = '', $Page = FALSE) {
       $this->Permission('Garden.Activity.View');
       
       // Limit to specific RoleIDs?
@@ -103,6 +100,7 @@ class ActivityController extends Gdn_Controller {
          $RoleID = explode(',', $RoleID);
          
       // Which page to load
+      list($Offset, $Limit) = OffsetLimit($Page, 30);
       $Offset = is_numeric($Offset) ? $Offset : 0;
       if ($Offset < 0)
          $Offset = 0;
@@ -135,9 +133,8 @@ class ActivityController extends Gdn_Controller {
             $this->View = 'activities';
          }
       } else {
-         $Limit = 50;
          $this->ActivityData = is_array($RoleID) ? $this->ActivityModel->GetForRole($RoleID, $Offset, $Limit) : $this->ActivityModel->Get('', $Offset, $Limit);
-         $TotalRecords = is_array($RoleID) ? $this->ActivityModel->GetCountForRole($RoleID) : $this->ActivityModel->GetCount();
+//         $TotalRecords = is_array($RoleID) ? $this->ActivityModel->GetCountForRole($RoleID) : $this->ActivityModel->GetCount();
          if ($this->ActivityData->NumRows() > 0) {
             $ActivityData = $this->ActivityData->ResultArray();
             $ActivityIDs = ConsolidateArrayValuesByKey($ActivityData, 'ActivityID');
@@ -154,7 +151,7 @@ class ActivityController extends Gdn_Controller {
          $this->Pager->Configure(
             $Offset,
             $Limit,
-            $TotalRecords,
+            FALSE,
             'activity/'.(is_array($RoleID) ? implode(',', $RoleID) : '0').'/%1$s/%2$s/'
          );
          
@@ -172,6 +169,8 @@ class ActivityController extends Gdn_Controller {
       $this->AddModule($RecentUserModule);
       
       $this->SetData('ActivityData', $this->ActivityData);
+
+      $this->CanonicalUrl(Url('/activity', TRUE));
       
       $this->Render();
    }
@@ -236,7 +235,7 @@ class ActivityController extends Gdn_Controller {
             );
             $this->Form->SetValidationResults($this->ActivityModel->ValidationResults());
             if ($this->Form->ErrorCount() > 0)
-               $this->StatusMessage = $this->Form->Errors();
+               $this->ErrorMessage($this->Form->Errors());
          }
       }
       

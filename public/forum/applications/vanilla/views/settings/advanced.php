@@ -6,7 +6,7 @@ echo $this->Form->Errors();
 <ul>
    <li>
       <?php
-         $Options = array('10' => '10', '15' => '15', '20' => '20', '25' => '25', '30' => '30', '50' => '50', '100' => '100');
+         $Options = array('10' => '10', '15' => '15', '20' => '20', '25' => '25', '30' => '30', '40' => '40', '50' => '50', '100' => '100');
          $Fields = array('TextField' => 'Code', 'ValueField' => 'Code');
          echo $this->Form->Label('Discussions per Page', 'Vanilla.Discussions.PerPage');
          echo $this->Form->DropDown('Vanilla.Discussions.PerPage', $Options, $Fields);
@@ -44,11 +44,6 @@ echo $this->Form->Errors();
                          '300' => T('Every 5 minutes'));
          echo $this->Form->Label('Refresh Comments', 'Vanilla.Comments.AutoRefresh');
          echo $this->Form->DropDown('Vanilla.Comments.AutoRefresh', $Options2, $Fields);
-      ?>
-   </li>
-   <li>
-      <?php
-         echo $this->Form->CheckBox('Vanilla.Categories.Use', 'Use categories to organize discussions');
       ?>
    </li>
    <li>

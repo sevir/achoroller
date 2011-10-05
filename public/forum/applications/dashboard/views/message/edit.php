@@ -13,7 +13,7 @@ echo $this->Form->Errors();
    <li>
       <?php
          echo $this->Form->Label('Page', 'Location');
-         echo $this->Form->DropDown('Location', $this->LocationData);
+         echo $this->Form->DropDown('Location', $this->Data('Locations'));
       ?>
    </li>
    <li>
@@ -51,4 +51,4 @@ echo $this->Form->Errors();
       ?>
    </li>
 </ul>
-<?php echo $this->Form->Close('Save'); ?>
+<?php echo $this->Form->Close('Save');

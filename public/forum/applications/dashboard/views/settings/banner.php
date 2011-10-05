@@ -22,10 +22,10 @@ echo $this->Form->Errors();
    <li>
       <?php
          echo $this->Form->Label('Banner Logo', 'Garden.Logo');
-         $Logo = C('Garden.Logo');
+         $Logo = $this->Data('Logo');
          if ($Logo) {
             echo Wrap(
-               Img($Logo),
+               Img(Gdn_Upload::Url($Logo)),
                'div'
             );
             echo Wrap(Anchor(T('Remove Banner Logo'), '/dashboard/settings/removelogo/'.$Session->TransientKey(), 'SmallButton'), 'div', array('style' => 'padding: 10px 0;'));
@@ -43,6 +43,31 @@ echo $this->Form->Errors();
          }
          
          echo $this->Form->Input('Logo', 'file');
+      ?>
+   </li>
+   <li>
+      <?php
+         echo $this->Form->Label('Shortcut Icon', 'Garden.Favicon');
+         $Favicon = $this->Data('Favicon');
+         if ($Favicon) {
+            echo Wrap(
+               Img(Gdn_Upload::Url($Favicon)),
+               'div'
+            );
+            echo Wrap(Anchor(T('Remove Shortcut Icon'), '/dashboard/settings/removefavicon/'.$Session->TransientKey(), 'SmallButton'), 'div', array('style' => 'padding: 10px 0;'));
+            echo Wrap(
+               T('Browse for a new shortcut icon if you would like to change it:'),
+               'div',
+               array('class' => 'Info')
+            );
+         } else {
+            echo Wrap(
+               T("The shortut icon shows up in your browser's menu."),
+               'div',
+               array('class' => 'Info')
+            );
+         }
+         echo $this->Form->Input('Favicon', 'file');
       ?>
    </li>
 </ul>

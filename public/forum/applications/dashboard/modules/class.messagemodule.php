@@ -12,13 +12,13 @@ class MessageModule extends Gdn_Module {
 
    protected $_Message;
 
-   public function __construct(&$Sender = '', $Message = FALSE) {
+   public function __construct($Sender = '', $Message = FALSE) {
       parent::__construct($Sender);
       $this->_Message = $Message;
    }
    
    public function AssetTarget() {
-      return $this->_Message == FALSE ? 'Content' : $this->_Message->AssetTarget;
+      return $this->_Message == FALSE ? 'Content' : GetValue('AssetTarget', $this->_Message);
    }
    
 }
