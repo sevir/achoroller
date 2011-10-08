@@ -6,6 +6,8 @@ $Definition['Activity'] = 'Actividad';
 $Definition['Inbox'] = 'Mensajes';
 $Definition['Security Check'] = 'AntiSPAM';
 $Definition['Welcome to Vanilla!'] = 'Bienvenido al foro';
+$Definition['Choose a name to identify yourself on the site.'] = 'Elige un nick para que los demás te reconozcan';
+$Definition['Leave blank unless connecting to an exising account.'] = 'Introduce una contraseña para entrar más tarde con usuario y contraseña	';
 /* end add by SeViR */
 
 /** Added to the baseline locale because a definition was missing. **/
